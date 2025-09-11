@@ -1,0 +1,184 @@
+/* App.css - Custom styles for a professional, glowing UI */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+  font-family: 'Roboto', sans-serif; /* Professional font */
+  transition: background-color 0.5s ease; /* Smooth theme change */
+}
+
+.app-container.safe {
+  background-color: #f0f4f8; /* Neutral/light blue-ish */
+}
+
+.app-container.low {
+  background-color: rgba(255, 255, 0, 0.1); /* Light yellow */
+}
+
+.app-container.medium {
+  background-color: rgba(255, 165, 0, 0.1); /* Light orange */
+}
+
+.app-container.high {
+  background-color: rgba(255, 0, 0, 0.1); /* Light red */
+}
+
+.scanner-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(255, 255, 255, 0.8); /* Glowing white effect */
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.input-url {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input-url:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.scan-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.scan-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+.scan-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #4CAF50, #45a049); /* Magic gradient */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.6); /* Glowing effect on hover */
+}
+
+.download-btn:disabled {
+  background: grey;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.results-box {
+  margin-top: 30px;
+  text-align: left;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.results-box h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.results-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.results-box li {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #444;
+}
+
+.severity {
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-right: 8px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Initial glowing white */
+  transition: color 0.5s, background-color 0.5s, box-shadow 0.5s; /* Change effect */
+}
+
+.severity.high {
+  color: white;
+  background-color: #dc2626;
+  box-shadow: 0 0 8px #dc2626; /* Glow changes to red */
+}
+
+.severity.medium {
+  color: white;
+  background-color: #ea580c;
+  box-shadow: 0 0 8px #ea580c; /* Glow changes to orange */
+}
+
+.severity.low {
+  color: white;
+  background-color: #ca8a04;
+  box-shadow: 0 0 8px #ca8a04; /* Glow changes to yellow */
+}
+
+.severity.info,
+.severity.unknown {
+  color: white;
+  background-color: #3b82f6;
+  box-shadow: 0 0 8px #3b82f6; /* Blue glow */
+}
+
+/* Remove or override any childish styles if present */
+p {
+  font-size: 16px;
+  color: #555;
+}
