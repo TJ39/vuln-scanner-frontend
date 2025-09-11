@@ -31,10 +31,11 @@ function App() {
   const handleDownloadReport = async () => {
     if (!scanId) return; // Safety check
     try {
-      const res = await axios.get(
-        `http://127.0.0.1:8000/report/${scanId}`,
-        { responseType: "blob" }
-      );
+       const res = await axios.get(
+  `https://vulnscanner.onrender.com/report/${scanId}`,
+  { responseType: "blob" }
+);
+
       const fileUrl = window.URL.createObjectURL(new Blob([res.data]));
       const link = document.createElement("a");
       link.href = fileUrl;
